@@ -1,6 +1,6 @@
 pragma solidity ^0.6.0;
 
-import "./IBondingCurve.sol";
+import "./interface/IBondingCurve.sol";
 
 contract Allocator {
     constructor(IBondingCurve bondingCurve) public {

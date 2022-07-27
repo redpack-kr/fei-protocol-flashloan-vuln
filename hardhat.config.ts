@@ -39,27 +39,71 @@ module.exports = {
     },
   },
   solidity: {
-    version: "0.6.6",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 1,
+    compilers: [
+      {
+        version: "0.5.0",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },    
       },
-      evmVersion: "istanbul",
-      outputSelection: {
-        "*": {
-          "": ["ast"],
-          "*": [
-            "evm.bytecode.object",
-            "evm.deployedBytecode.object",
-            "abi",
-            "evm.bytecode.sourceMap",
-            "evm.deployedBytecode.sourceMap",
-            "metadata",
-          ],
-        },
+      {
+        version: "0.6.0",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },    
       },
-    },
+      {
+        version: "0.6.2",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },    
+      },
+      {
+        version: "0.6.6",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },    
+      },
+      {
+        version: "0.6.8",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },    
+      },
+      {
+        version: "0.7.0",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },    
+      },
+      {
+        version: "0.8.13",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },    
+      }
+    ]
   },
   paths: {
     sources: "./solidity/contracts/",
