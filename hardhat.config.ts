@@ -2,10 +2,12 @@
 import { config as dotEnvConfig } from "dotenv";
 dotEnvConfig();
 
+import "@openzeppelin/hardhat-upgrades";
+
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-waffle";
-import "@typechain/hardhat";
 import "@nomiclabs/hardhat-ethers";
+import "@typechain/hardhat";
 import "hardhat-deploy";
 import "solidity-coverage";
 
@@ -30,7 +32,7 @@ module.exports = {
     },
     eth_mainnetfork: {
       url: process.env.FORK_RPC,
-      accounts: [process.env.ETH_MAINNET_PRIVATE_KEY],
+      accounts: [process.env.FUNDED_PRIVATE_KEY],
     },
   },
   namedAccounts: {

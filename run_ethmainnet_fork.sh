@@ -12,4 +12,5 @@ else
     else
         echo "creating a mainnet fork node ${ETH_MAINNET_RPC}" with block number ${FORK_BLK_NUMBER}
         npx hardhat node --fork ${ETH_MAINNET_RPC} --fork-block-number ${FORK_BLK_NUMBER} --no-deploy
-fi;
+    fi
+fi
